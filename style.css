@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element width/height */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 45vh;
+    width: 40vh; /* Default size for larger screens */
+    position: absolute;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+}
+
+form select, input, button {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+}
+
+form input {
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.75rem;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.dropdown i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.select-container img {
+    max-width: 2rem;
+}
+
+.select-container {
+    font-size: 2rem;
+    display: flex;
+    width: 6rem;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-container select {
+    font-size: 1rem;
+    width: auto;
+}
+
+.msg {
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+}
+
+form button {
+    height: 3rem;
+    background-color: #af4d98;
+    color: white;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+
+.bgImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heading {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    color: coral;
+    text-shadow: 
+        1px 1px 0 coral, 
+        -1px -1px 0 coral, 
+        -1px 1px 0 coral, 
+        1px -1px 0 coral;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for tablets and smaller devices */
+        padding: 1.5rem;
+    }
+
+    .heading {
+        font-size: 2.5rem; /* Reduce font size */
+        margin-top: 5rem;
+    }
+
+    form input, form button {
+        font-size: 0.9rem; /* Adjust font size for inputs and buttons */
+        height: 2.5rem;
+    }
+
+    .dropdown i {
+        font-size: 1.2rem; /* Reduce arrow icon size */
+    }
+
+    .select-container {
+        font-size: 1.5rem; /* Adjust select container font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%; /* Further reduce width for smaller screens */
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 2rem; /* Reduce font size further */
+        margin-top: 4rem;
+    }
+
+    form input, form button {
+        font-size: 0.8rem; /* Smaller font for mobile */
+        height: 2.2rem;
+    }
+
+    .dropdown i {
+        font-size: 1rem; /* Reduce arrow icon size */
+    }
+
+    .select-container {
+        font-size: 1.2rem; /* Adjust select container font size */
+    }
+}
